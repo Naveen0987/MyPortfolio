@@ -2,23 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
 
     <style>
-      * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
       body {
         background-color: #fff5d7;
-  font-family: 'Roboto', sans-serif;
-
       }
       #tagcontainer {
         display: flex;
@@ -88,13 +77,14 @@
         margin-top: 20px;
       }
       #about {
-        height: 500px;
-        width: 1000px;
+          height: auto;
+        width: 80%;
+         max-width: 770px;
         border: 1px solid black;
         margin-left: 150px;
         background-color: #ff5e6c;
         box-shadow: 0 20px 50px rgba(8, 112, 184, 0.6);
-        padding: 20px;
+        padding: 2rem;
         border-radius: 15px;
       }
 
@@ -303,7 +293,7 @@
         width: 1210px;
         border: 1px solid black;
         margin: 50px 0px 0px 150px;
-        background-color: #FF7F50;
+        background-color: #ff7f50;
         box-shadow: 0 20px 50px rgba(8, 112, 184, 0.6);
         border-radius: 15px;
       }
@@ -411,237 +401,231 @@
         height: 250px;
         margin: 120px 200px 0px 0px;
       }
-     footer{
-      text-align: center;
-      margin-top: 10px;
-     }
-.menu-toggle {
-  display: none;
-}
+      footer {
+        text-align: center;
+        margin-top: 10px;
+      }
+      .menu-toggle {
+        display: none;
+      }
 
-#last{
-  text-decoration: none;
-  color: #000;
-  margin-top: 30px;
-}
-/*media-quires*/
+      #last {
+        text-decoration: none;
+        color: #000;
+        margin-top: 30px;
+      }
+      /*media-quires*/
 
+      @media (max-width: 1024px) {
+        #tagcontainer {
+          margin-left: 50px;
+          flex-direction: column;
+          align-items: flex-start;
+        }
 
-@media (max-width: 1024px) {
-  #tagcontainer {
-    margin-left: 50px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+        #navbar {
+          display: flex;
+          gap: 20px;
+        }
 
-  #navbar {
-    display: flex;
-    gap: 20px;
-  }
+        .menu-toggle {
+          display: none;
+          font-size: 25px;
+          cursor: pointer;
+          margin-left: auto;
+          color: #51354a;
+          font-weight: bold;
+        }
 
-  .menu-toggle {
-    display: none;
-    font-size: 25px;
-    cursor: pointer;
-    margin-left: auto;
-    color: #51354a;
-    font-weight: bold;
-  }
+        #info {
+          flex-direction: column;
+          align-items: center;
+        }
 
-  #info {
-    flex-direction: column;
-    align-items: center;
-  }
+        #about {
+          width: 90%;
+          margin-left: 0;
+        }
 
-  #about {
-    width: 90%;
-    margin-left: 0;
-  }
+        #contact {
+          width: 80%;
+          margin: 30px 0;
+        }
 
-  #contact {
-    width: 80%;
-    margin: 30px 0;
-  }
+        #projects {
+          width: 90%;
+          margin-left: 0;
+        }
 
-  #projects {
-    width: 90%;
-    margin-left: 0;
-  }
+        #projects-content {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr); /* 2 per row */
+          gap: 20px;
+        }
 
-  #projects-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 per row */
-    gap: 20px;
-  }
+        .project-box {
+          width: 100%;
+          height: auto;
+          padding: 15px;
+          box-sizing: border-box;
+        }
 
-  .project-box {
-    width: 100%;
-    height: auto;
-    padding: 15px;
-    box-sizing: border-box;
-  }
+        #message {
+          width: 90%;
+          flex-direction: column;
+          align-items: center;
+          height: auto;
+          padding: 20px;
+        }
 
-  #message {
-    width: 90%;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 20px;
-  }
+        #footer-contact {
+          text-align: center;
+        }
 
-  #footer-contact {
-    text-align: center;
-  }
+        #welcome {
+          margin: 20px 0 0 0;
+          width: 200px;
+          height: auto;
+        }
+      }
 
-  #welcome {
-    margin: 20px 0 0 0;
-    width: 200px;
-    height: auto;
-  }
-}
+      /* For mobile phones (width ≤ 600px) */
+      @media (max-width: 600px) {
+        body {
+          font-size: 14px;
+        }
 
-/* For mobile phones (width ≤ 600px) */
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
+        #logo {
+          height: 50px;
+          width: 50px;
+          margin: 0 auto;
+        }
 
-  #logo {
-    height: 50px;
-    width: 50px;
-    margin: 0 auto;
-  }
+        #logo > p {
+          font-size: 16px;
+          margin-top: 15px;
+        }
 
-  #logo > p {
-    font-size: 16px;
-    margin-top: 15px;
-  }
+        #tagline {
+          text-align: center;
+          margin: 10px auto;
+        }
 
-  #tagline {
-    text-align: center;
-    margin: 10px auto;
-  }
+        /* Navbar  for mobile */
+        #navbar {
+          display: none;
+          flex-direction: column;
+          background-color: #fff5d7;
+          position: absolute;
+          top: 60px;
+          right: 20px;
+          width: 200px;
+          padding: 10px;
+          border: 1px solid black;
+          border-radius: 10px;
+        }
 
-  /* Navbar  for mobile */
-  #navbar {
-    display: none;
-    flex-direction: column;
-    background-color: #fff5d7;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 200px;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 10px;
-  }
+        #navbar.show {
+          display: flex;
+          margin-left: 3px;
+        }
 
-  #navbar.show {
-    display: flex;
-    margin-left: 3px;
-  }
+        .menu-toggle {
+          display: block;
+        }
 
-  .menu-toggle {
-    display: block;
-  }
+        #navbar a {
+          padding: 10px;
+          text-align: center;
+          border-bottom: 1px solid #ccc;
+        }
 
-  #navbar a {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
-  }
+        #navbar a:last-child {
+          border-bottom: none;
+        }
 
-  #navbar a:last-child {
-    border-bottom: none;
-  }
+        #about {
+          width: auto;
+          height: auto;
+          padding: 15px;
+        }
 
-  #about {
-    width: auto;
-    height: auto;
-    padding: 15px;
-  }
+        #aboutme {
+          margin-top: 70px;
+          font-size: 14px;
+          text-align: justify;
+        }
 
-  #aboutme {
-    margin-top: 70px;
-    font-size: 14px;
-    text-align: justify;
-  }
+        #skl {
+          grid-template-columns: repeat(3, 90px); /* Skills compact */
+          margin: 20px auto;
+          gap: 10px;
+          justify-content: center;
+        }
 
-  #skl {
-    grid-template-columns: repeat(3, 90px); /* Skills compact */
-    margin: 20px auto;
-    gap: 10px;
-    justify-content: center;
-  }
+        #contact {
+          width: auto;
+          height: auto;
+          padding: 15px;
+        }
 
-  #contact {
-    width: auto;
-    height: auto;
-    padding: 15px;
-  }
+        #projects {
+          width: auto;
+          height: 1050px;
+          padding: 15px;
+          margin: 20px 0;
+        }
 
-  #projects {
-    width: auto;
-    height: 1050px;
-    padding: 15px;
-    margin: 20px 0;
-  }
+        #projects-content {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 200px;
+          justify-items: center;
+        }
 
-  #projects-content {
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 200px;
-    justify-items: center;
-  }
+        .project-box {
+          height: 230px;
+          width: 300px;
+          max-width: 350px;
 
-  .project-box {
-    height: 230px;
-    width: 300px;
-    max-width: 350px;
-    
-    margin: 0 auto;
-    padding: 15px;
-  }
+          margin: 0 auto;
+          padding: 15px;
+        }
 
-  #message {
-    width: auto;
-    padding: 15px;
-    margin: 30px 0 0 0;
-  }
+        #message {
+          width: auto;
+          padding: 15px;
+          margin: 30px 0 0 0;
+        }
 
-  #footer-contact {
-    font-size: 14px;
-    margin: 10px 0px 30px 0px;
-    text-align: center;
-  }
+        #footer-contact {
+          font-size: 14px;
+          margin: 10px 0px 30px 0px;
+          text-align: center;
+        }
 
-  #message form input,
-  #message form textarea {
-    width: 90%;
-    margin-left: 0;
-  }
+        #message form input,
+        #message form textarea {
+          width: 90%;
+          margin-left: 0;
+        }
 
-  #footer-contact h3,
-  ul {
-    margin-left: 0;
-    text-align: left;
-    padding-left: 10px;
-  }
+        #footer-contact h3,
+        ul {
+          margin-left: 0;
+          text-align: left;
+          padding-left: 10px;
+        }
 
-  #message form button {
-    margin: 20px auto;
-  }
+        #message form button {
+          margin: 20px auto;
+        }
 
-  #welcome {
-    width: 150px;
-    margin: 20px auto 0 auto;
-  }
-}
-
-
-
-
-
+        #welcome {
+          width: 150px;
+          margin: 20px auto 0 auto;
+        }
+      }
     </style>
   </head>
   <body>
@@ -844,7 +828,8 @@
     <footer>
       <p>
         &copy; <span id="year">2025</span> Naveen. All rights reserved. |
-        <a id="last"
+        <a
+          id="last"
           href="https://www.jamunafoundation.com/"
           target="_blank"
           rel="noopener noreferrer"
